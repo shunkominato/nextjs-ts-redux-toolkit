@@ -1,3 +1,4 @@
+import React, { useState, VFC } from 'react';
 import {
   decrement,
   increment,
@@ -6,12 +7,10 @@ import {
   incrementIfOdd,
   selectCount,
 } from '@/features/counter/counterSlice';
-import React, { useState } from 'react';
-
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import styles from './Counter.module.css';
 
-const Counter = () => {
+const Counter: VFC = () => {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
