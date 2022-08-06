@@ -22,6 +22,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'no-unused-vars': 'off',
     'react/jsx-indent': 0,
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off'
   }
 };

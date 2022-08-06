@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </Provider>
   );
 }
