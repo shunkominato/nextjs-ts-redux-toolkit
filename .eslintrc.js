@@ -24,6 +24,7 @@ module.exports = {
     'react/jsx-indent': 0,
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
-    "@typescript-eslint/no-misused-promises": 'off'
+    "@typescript-eslint/no-misused-promises": 'off',
+    "import/no-cycle": 'off'
   }
 };

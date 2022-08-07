@@ -1,7 +1,7 @@
 
 import { NextPage } from "next";
 // import { FixedLayout } from "src/layout";
-import { Todo } from "@/features/todo";
+import { Todo } from "./features/components/Todo";
 
 const TodoPage: NextPage = () => {
   return <Todo />
