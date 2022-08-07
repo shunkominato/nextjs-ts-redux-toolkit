@@ -5,7 +5,6 @@ type FormValue = {
   todo: string,
 }
 
-
 export const Todo: FC = () => {
   const { register, handleSubmit } = useForm<FormValue>();
   const onSubmit = (data: FormValue) => { 

@@ -23,6 +23,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'react/jsx-indent': 0,
     'import/prefer-default-export': 'off',
-    'react/jsx-props-no-spreading': 'off'
+    'react/jsx-props-no-spreading': 'off',
+    "@typescript-eslint/no-misused-promises": 'off'
   }
 };
