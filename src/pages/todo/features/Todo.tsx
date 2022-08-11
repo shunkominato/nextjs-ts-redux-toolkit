@@ -1,8 +1,8 @@
 import { useAppSelector } from '@/app/hooks';
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
-import { useAddTodo } from '../hooks/useAddTodo';
-import { selectTodo } from '../slices/todoSlice';
+import { useAddTodo } from './hooks/useAddTodo';
+import { selectTodo } from './slices/todoSlice';
 
 type FormValue = {
   todo: string;
