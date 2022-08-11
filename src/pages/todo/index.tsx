@@ -1,10 +1,9 @@
-
-import { NextPage } from "next";
+import { NextPage } from 'next';
 // import { FixedLayout } from "src/layout";
-import { Todo } from "./features/components/Todo";
+import { Todo } from './features/components/Todo';
 
 const TodoPage: NextPage = () => {
-  return <Todo />
+  return <Todo />;
 };
 
 // AboutPage.getLayout = FixedLayout;

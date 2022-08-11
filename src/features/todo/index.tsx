@@ -1,20 +1,20 @@
 import { FC } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
 type FormValue = {
-  todo: string,
-}
+  todo: string;
+};
 
 export const Todo: FC = () => {
   const { register, handleSubmit } = useForm<FormValue>();
-  const onSubmit = (data: FormValue) => { 
+  const onSubmit = (data: FormValue) => {
     console.log(data);
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("todo")} />
+      <input {...register('todo')} />
       <input type="submit" />
     </form>
-  )
-}
+  );
+};

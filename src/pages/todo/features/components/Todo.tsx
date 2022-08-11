@@ -1,31 +1,28 @@
-import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { useAppSelector } from '@/app/hooks';
 import { FC } from 'react';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import { useAddTodo } from '../hooks/useAddTodo';
-import { add, selectTodo } from '../slices/todoSlice';
-
+import { selectTodo } from '../slices/todoSlice';
 
 type FormValue = {
-  todo: string,
-}
+  todo: string;
+};
 
 export const Todo: FC = () => {
   const todo = useAppSelector(selectTodo);
-  const dispatch = useAppDispatch();
+  const { addTodo } = useAddTodo();
   const { register, handleSubmit } = useForm<FormValue>();
-  const onSubmit = (data: FormValue) => { 
-    dispatch(add({
-      todo: data.todo
-    }))
-  }
+  const onSubmit = (data: FormValue) => {
+    addTodo(data.todo);
+  };
 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("todo")} />
+        <input {...register('todo')} />
         <input type="submit" />
       </form>
-      <span>{ todo.todo }</span>
+      <span>{todo.todo}</span>
     </>
-  )
-}
+  );
+};

@@ -1,15 +1,16 @@
-import { useAppDispatch } from "@/app/hooks";
-import { add } from "../slices/todoSlice";
+import { useAppDispatch } from '@/app/hooks';
+import { add } from '../slices/todoSlice';
 
-
-export const useAddTodo = (todo: string) => {
+export const useAddTodo = () => {
   const dispatch = useAppDispatch();
-  const addTodo = () => {
-    dispatch(add({
-      todo
-    }))
-  }
+  const addTodo = (todo: string) => {
+    dispatch(
+      add({
+        todo,
+      })
+    );
+  };
   return {
-    addTodo
-  }
-}
+    addTodo,
+  };
+};

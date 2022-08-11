@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -10,11 +10,24 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks'],
-  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'next', 'next/core-web-vitals', 'prettier', 'plugin:storybook/recommended'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'next',
+    'next/core-web-vitals',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   ignorePatterns: ['.eslintrc.*', 'next.config.*'],
   rules: {
     curly: ['error', 'all'],
@@ -24,7 +37,8 @@ module.exports = {
     'react/jsx-indent': 0,
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
-    "@typescript-eslint/no-misused-promises": 'off',
-    "import/no-cycle": 'off'
-  }
+    '@typescript-eslint/no-misused-promises': 'off',
+    'import/no-cycle': 'off',
+    'import/no-extraneous-dependencies': 'off',
+  },
 };
