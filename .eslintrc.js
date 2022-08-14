@@ -40,5 +40,6 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     'import/no-cycle': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-underscore-dangle': 'off',
   },
 };
